@@ -30,3 +30,9 @@ def __parse_function_csv(serial_exmp_):
                             [default_height - np.random.randint(0, 4), default_width - np.random.randint(0, 4), 1])
     image_ = tf.image.resize_images(image_, [default_height, default_width])
     return image_, label_
+
+#获取数据集
+def get_dataset(record_name_):
+    record_path_ = os.path.join(data_folder_name, data_path_name, record_name_)
+    data_set_ = tf.data.TFRecordDataset(record_path_)
+    return data_set_.map(__parse_function_csv)
