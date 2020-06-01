@@ -1,5 +1,5 @@
 # Facial-Expression-Recognition
-人脸表情识别系统
+基于CNN的人脸表情识别系统
 
 主要功能:
 
